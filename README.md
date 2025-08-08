@@ -1,4 +1,4 @@
-# 🎟️ QuickShow Movie Ticket App
+# 🎟️ QuickShow Movie Ticket Booking App
 
 **QuickShow** is a next-generation, full-featured movie ticket booking platform designed for both moviegoers and cinema managers. With a sleek, modern UI and robust admin tools, QuickShow delivers a premium, real-world cinema experience—online.
 
@@ -10,6 +10,13 @@
 - **Admin Dashboard:** Real-time analytics, show management, and booking insights for cinema managers.
 - **Developer Friendly:** Modular, well-documented codebase for rapid feature development and easy onboarding.
 - **Cloud-Ready:** Easily deployable to Vercel, Netlify, or your favorite cloud provider.
+
+### For Moviegoers
+
+- **Discover Movies:** Browse trending, upcoming, and featured films with immersive visuals.
+- **Detailed Movie Pages:** View ratings, genres, cast, trailers, and more.
+- **Easy Booking:** Interactive seat selection, real-time availability, and a smooth checkout process.
+- **Notifications:** Get instant updates on bookings, show changes, and special offers.
 
 ## ✨ Features
 
@@ -33,7 +40,7 @@
 - **Testing:** Jest (recommended for future expansion)
 - **Deployment:** Vercel, Netlify, or any static host
 
-## Getting Started
+## ⚡ Getting Started
 
 1. **Clone the repository:**
    ```bash
@@ -43,15 +50,30 @@
 
 2. **Install dependencies:**
    ```bash
-   npm install packages
+   cd client
+   npm install
+   cd ../server
+   npm install
    ```
 
 3. **Run the app:**
-   ```bash
-   npm start
-   npm run dev -- start the FrontEnd
-   npm run server -- start the server
-   ```
+   - **Frontend:**  
+     ```bash
+     cd client
+      npm run dev
+     ```
+   - **Backend:**  
+     ```bash
+     cd server
+      npm run dev
+      npm run server
+      npm start
+     ```
+
+4. **Open in your browser:**  
+   [http://localhost:5173](http://localhost:5173) (or your configured port)
+
+
 ## 🖼️ App Preview
 - **Movie TicketApp**  
   <img src="./client/public/Movie Ticket App Home Page.png" alt="MovieTicketApp" width="900">
@@ -66,15 +88,18 @@
 - **Seat LayOut**
 <img src="./client/public/SeatLayout.png" alt="SeatLayout" width="900">
 
- 
+---
 
+## 🛡️ For Managers: What Sets QuickShow Apart?
 
-## 🛡️ For Managers
-
-- **Real-Time Dashboard:** Instantly see bookings, revenue, and show performance.
-- **Show Scheduling:** Add or remove shows, set prices, and manage seat layouts.
-- **User Insights:** Track top customers and booking trends.
-- **Secure & Reliable:** Built with best practices for data integrity and user privacy.
+- **Instant Insights:** See bookings, revenue, and show performance at a glance.
+- **Flexible Show Scheduling:** Add, edit, or remove shows with just a few clicks.
+- **Custom Pricing:** Set prices per show or seat type to maximize revenue.
+- **Audience Analytics:** Understand your customers and tailor your offerings.
+- **Easy Staff Onboarding:** Intuitive admin panel means less training, more productivity.
+- **Marketing-Ready:** Built-in tools for promotions, newsletters, and social sharing.
+- **Secure & Compliant:** Modern authentication and data protection out of the box.
+- **Cloud-Ready:** Manage your cinema from anywhere, on any device.
 
 ---
 
