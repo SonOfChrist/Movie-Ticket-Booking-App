@@ -37,8 +37,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clonehttps://github.com/SonOfChrist/Movie-Ticket-Booking
-   cd quickshow-movie-ticket-app/client
+   git clone https://github.com/SonOfChrist/Movie-Ticket-Booking-App.git
+   cd quickshow-movie-ticket-app -> Client & Server
    ```
 
 2. **Install dependencies:**
@@ -49,21 +49,22 @@
 3. **Run the app:**
    ```bash
    npm start
-   npm run dev
+   npm run dev -- start the FrontEnd
+   npm run server -- start the server
    ```
 ## 🖼️ App Preview
 - **Movie TicketApp**  
-  <img src="./public/Movie Ticket App Home Page.png" alt="MovieTicketApp" width="900">
+  <img src="./client/public/Movie Ticket App Home Page.png" alt="MovieTicketApp" width="900">
 - **Movie Card**
-   <img src="./public/QuickShowMovieCard.png" alt="MovieCard" width="900">
+   <img src="./client/public/QuickShowMovieCard.png" alt="MovieCard" width="900">
 - **Movie Trailers**
- <img src="./public/MoviesTrailerSection.png" alt="MovieTrailers" width="900"> 
+ <img src="./client/public/MoviesTrailerSection.png" alt="MovieTrailers" width="900"> 
 
 - **Admin Dashboard | Add Shows | List Bookings | List Shows**
- <img src="./public/AdminDashboard.png" alt="adminDashboard" width="900"> 
+ <img src="./client/public/AdminDashboard.png" alt="adminDashboard" width="900"> 
 
 - **Seat LayOut**
-<img src="./public/SeatLayout.png" alt="SeatLayout" width="900">
+<img src="./client/public/SeatLayout.png" alt="SeatLayout" width="900">
 
  
 
