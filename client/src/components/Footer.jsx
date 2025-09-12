@@ -83,7 +83,7 @@ const Footer = () => {
                         <div className="text-base space-y-2">
                         <p className="flex items-center gap-2 hover:text-gray-800 transition cursor-pointer"><span role="img" aria-label="phone">📞</span> +254-743-587-157</p>
                         <p className="flex items-center gap-2 hover:text-gray-800 transition cursor-pointer"><span role="img" aria-label="email">✉️</span> mochogestanley80@gmail.com</p>
-                        <p className="flex items-center gap-2 hover:text-gray-800 transition cursor-pointer"><span role="img" aria-label="location">📍</span>Location Nairobi, Kenya - 00100</p>
+                        <p className="flex items-center gap-2 hover:text-gray-800 transition cursor-pointer"><span role="img" aria-label="location">📍</span>Location Nairobi, Kenya 14252 - 00200</p>
                         </div>
                     </div>
                     </div>
