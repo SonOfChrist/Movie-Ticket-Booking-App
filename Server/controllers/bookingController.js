@@ -1,5 +1,5 @@
-import Booking from "../models/Booking";
-import Show from "../models/Show"
+import Booking from "../models/Bookings.js";
+import Show from "../models/Show.js"
 
 // Checking Seats availability
 const checkingSeatsAvailability =  async (showId, selectedSeats) => {
@@ -15,7 +15,7 @@ const checkingSeatsAvailability =  async (showId, selectedSeats) => {
     }
 }
 
-export const creaeBooking = async (req, res) => {
+export const createBooking = async (req, res) => {
     try {
         const {userId} = req.auth();
         const {showId, selectedSeats} = req.body;

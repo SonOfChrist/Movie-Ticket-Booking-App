@@ -1,6 +1,5 @@
-import { json } from "express";
 import Booking from "../models/Booking.js"
-import Show from "../models/Show";
+import Show from "../models/Show.js";
 
 // API to check if user is admin 
 export const isAdmin = async (req, res) => {
@@ -19,6 +18,31 @@ export const getDashboardData = async (req, res) => {
             totalUser
         }
         res.json({success: true, dashBoardData})
+    } catch(error) {
+        console.error(error);
+        res.json({success: false, message: error.message})
+    }
+}
+
+// API to get all Shows
+export const getAllShows = async (req, res) => {
+    try {
+        const shows = await Show.find({showDateTime:{$gte: new Date()}}).populate('movie').sort({showDateTime: 1})
+        res.json({success: true, shows})
+    } catch(error) {
+        console.error(error);
+        res.json({success: false, message: error.message})
+    }
+}
+
+// API to get all Bookings
+export const getAllBookings = async (req, res) => {
+    try {
+        const bookings = await Booking.find({}).populate('user').populate({
+            path: "show",
+            populate: {path: "movie"}
+        }).sort({ createdAt: -1 })
+        res.json({success: true, bookings})
     } catch(error) {
         console.error(error);
         res.json({success: false, message: error.message})

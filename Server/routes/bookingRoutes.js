@@ -1,5 +1,4 @@
 import express from "express";
-import React from 'react'
 import { createBooking, getOccupiedSeats } from "../controllers/bookingController.js";
 
 const bookingRoutes = express.Router();
