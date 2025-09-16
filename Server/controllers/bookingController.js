@@ -1,4 +1,4 @@
-import Booking from "../models/Bookings.js";
+import Booking from "../models/Booking.js";
 import Show from "../models/Show.js"
 
 // Checking Seats availability

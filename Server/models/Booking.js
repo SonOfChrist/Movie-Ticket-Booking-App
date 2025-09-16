@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const boookingSchema = new mongoose.Schema({
+const bookingSchema = new mongoose.Schema({
     user: {type: String, required:true, ref: 'User'},
     show: {type: String, required:true, ref: 'Show'},
     amount: {type: Number, required:true},
@@ -9,6 +9,6 @@ const boookingSchema = new mongoose.Schema({
     paymentLink:{type: String},
 }, {timestamps: true })
 
-const Booking = mongoose.model("Booking", boookingSchema);
+const Booking = mongoose.model("Booking", bookingSchema);
 
 export default Booking;

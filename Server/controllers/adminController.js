@@ -3,7 +3,7 @@ import Show from "../models/Show.js";
 
 // API to check if user is admin 
 export const isAdmin = async (req, res) => {
-    res.json({success: true, isAdmin:true})
+    res.json({success: true, isAdmin: true})
 }
 
 // API to get dashboard data
@@ -14,7 +14,8 @@ export const getDashboardData = async (req, res) => {
         const totalUser =  await User.countDocuments();
         const dashBoardData = {
             totalBookings: bookings.length,
-            totalRevenue: bookings.reduce((acc, booking) => acc + booking,amount, 0), activeShows,
+            totalRevenue: bookings.reduce((acc, booking) => acc + booking.amount, 0), 
+            activeShows,
             totalUser
         }
         res.json({success: true, dashBoardData})

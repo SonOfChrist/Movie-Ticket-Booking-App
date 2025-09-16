@@ -2,7 +2,7 @@ import axios from "axios";
 import Movie from "../models/Movie.js";
 import Show from "../models/Show.js";
 
-// Function that will fetch movie data from TMDB
+// Function that will fetch movie data from TMDB API
 export const getNowPlayingMovies = async (req, res) => {
     try{
         const { data } = await axios.get('https://api.themoviedb.org/3/movie/now_playing', {
@@ -11,8 +11,8 @@ export const getNowPlayingMovies = async (req, res) => {
         const movies  = data.results;
         res.json({success: true, movies: movies})
         } catch (error) {
-            console.error(error);
-            res.json({success: false, message: error.message})
+        console.error(error);
+        res.json({success: false, message: error.message})
         }
 }
 
