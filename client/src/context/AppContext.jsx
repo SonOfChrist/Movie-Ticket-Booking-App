@@ -9,7 +9,7 @@ axios.defaults.baseURL = import.meta.env.VITE_BASE_URL
 
 export const AppContext = createContext()
 
-export const AppProvider = ({ childern }) => {
+export const AppProvider = ({ children }) => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [shows, setShows] = useState([])
     const [favoriteMovies, setFavoriteMovies] = useState([])
@@ -76,7 +76,7 @@ export const AppProvider = ({ childern }) => {
     }
     return(
         <AppContext.Provider value={value}>
-            {childern}
+            {children}
         </AppContext.Provider>
     )
 }
