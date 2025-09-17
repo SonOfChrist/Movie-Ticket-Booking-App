@@ -1,9 +1,9 @@
-# 🎟️ QuickShow Movie Ticket Booking App
+# 🎟️ Movie Ticket Booking App
 
-**QuickShow** is a next-generation, full-featured movie ticket booking platform designed for both moviegoers and cinema managers. With a sleek, modern UI and robust admin tools, QuickShow delivers a premium, real-world cinema experience—online.
+**Movie Ticket Booking** is a next-generation, full-featured movie ticket booking platform designed for both moviegoers and cinema managers. With a sleek, modern UI and robust admin tools, QuickShow delivers a premium, real-world cinema experience—online.
 
 ---
-## 🚀 Why QuickShow?
+## 🚀 Why -- Movie Ticket Booking App?
 
 - **Enterprise-Ready:** Built with scalability, security, and maintainability in mind.
 - **Stunning UI/UX:** Eye-catching, responsive design powered by React and Tailwind CSS.
@@ -30,16 +30,6 @@
 - 📱 **Mobile-First:** Fully responsive for all devices.
 - 🌐 **Social & Marketing:** Newsletter signup, social media links, and shareable movie pages.
 
-## 🏗️ Tech Stack
-
-- **Frontend:** React, Tailwind CSS, Lucide Icons
-- **Routing:** React Router
-- **State Management:** React Hooks
-- **Notifications:** react-hot-toast
-- **Authentication:** Clerk (plug-and-play, can be swapped)
-- **Testing:** Jest (recommended for future expansion)
-- **Deployment:** Vercel, Netlify, or any static host
-
 ## ⚡ Getting Started
 
 1. **Install dependencies:**
@@ -64,11 +54,11 @@
       npm start
      ```
 ## 🖼️ App Preview
-- **Movie TicketApp**  
+- **Movie TicketApp Booking App**  
   <img src="./client/public/MovieTicketAppDesignedPage.png" alt="MovieTicketApp" width="900">
 ---
 
-## 🛡️ For Managers: What Sets QuickShow Apart?
+## 🛡️ For Managers: What Sets Movie TicketApp Booking App Apart?
 
 - **Instant Insights:** See bookings, revenue, and show performance at a glance.
 - **Flexible Show Scheduling:** Add, edit, or remove shows with just a few clicks.

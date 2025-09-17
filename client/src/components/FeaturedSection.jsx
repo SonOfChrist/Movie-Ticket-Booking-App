@@ -9,9 +9,9 @@ import { dummyShowsData } from '../assets/assets';
 const FeaturedSection = () => {
 
   const navigate = useNavigate();
-
+// 'h-screen flex items-center justify-start bg-cover bg-center'
   return (
-    <div className='px-6 md:px-16 lg:px-24 xl:px-44 overflow-hidden'>
+    <div className='px-6 md:px-16 lg:px-24 xl:px-44 overflow-hidden bg-cover bg-center justify-start h-screen'  style={{ backgroundImage: 'url("/moana-disney.png")' }}>
       <div className='relative flex items-center justify-between pt-20 pb-10'>
         <BlurCircle  top='0' right='-80px'/>
         <p className='text-gray-300 font-medium text-lg'>
