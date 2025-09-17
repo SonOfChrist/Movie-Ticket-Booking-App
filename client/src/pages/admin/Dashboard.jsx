@@ -1,18 +1,24 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { ChartLineIcon, PlayCircleIcon, UsersIcon, CircleDollarSignIcon, StarIcon } from 'lucide-react';
-import { dummyDashboardData } from '../../assets/assets'
+//import { dummyDashboardData } from '../../assets/assets.js'
 import Loading from '../../components/Loading';
 import Title from '../../components/admin/Title.jsx';
 import BlurCircle from '../../components/BlurCircle';
 import dateFormat from '../../lib/dateFormat.js';
+import toast from 'react-hot-toast';
+import { useAppContext } from '../../context/AppContext.jsx';
+
 
 const Dashboard = () => {
+  const {axios, getToken, user, image_Base_Url} = useAppContext()
+
   const currency  = import.meta.env.VITE_CURRENCY;
-  const [dashboardData, setDashboardData] = useState({
+
+  const [dashboardData, setDashBoardData] = useState({
     totalBookings: 0,
     totalRevenue: 0,
-    activeShows:[],
+    activeShows: [],
     totalUser: 0,  
   });
   const [loading, setLoading] = useState(true);
@@ -24,14 +30,25 @@ const Dashboard = () => {
     {title: "Total Users", value: dashboardData.totalUser || "0",  Icon: UsersIcon },
   ]
 
-  const fetchDashboardData = async () => {
-    setDashboardData(dummyDashboardData);
-    setLoading(false);
+  const fetchDashBoardData = async () => {
+    try {
+      const { data } = await axios.get('/api/admin/dashboard', {headers: {Authorization:`Bearer ${await getToken()}`}})
+      if(data.success){
+        setDashBoardData(data.dashboardData)
+        setLoading(false)
+      }else {
+        toast.error(data.message) 
+      }
+    } catch (error) {
+      toast.error('Error fetching dashboard data:', error)
+    }
   };
 
   useEffect(() => {
-    fetchDashboardData();
-  }, []);
+    if(user){
+      fetchDashBoardData();
+    }
+  }, [user]);
 
   return !loading ? (
     <>
@@ -66,7 +83,7 @@ const Dashboard = () => {
             className="w-64 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-primary/10 border border-primary/20 shadow-lg hover:-translate-y-2 transition duration-300"
           >
             <div className="relative">
-              <img src={show.movie.poster_path} alt='' className="h-56 w-full object-cover" />
+              <img src={image_Base_Url + show.movie.poster_path} alt='' className="h-56 w-full object-cover" />
               <div className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                 <StarIcon className="w-4 h-4 text-yellow-400" />
                 {show.movie.vote_average.toFixed(1)}
