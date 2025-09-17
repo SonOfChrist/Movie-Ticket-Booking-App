@@ -9,7 +9,7 @@
 - **Stunning UI/UX:** Eye-catching, responsive design powered by React and Tailwind CSS.
 - **Admin Dashboard:** Real-time analytics, show management, and booking insights for cinema managers.
 - **Developer Friendly:** Modular, well-documented codebase for rapid feature development and easy onboarding.
-- **Cloud-Ready:** Easily deployable to Vercel, Netlify, or your favorite cloud provider.
+- **Cloud-Ready:** Easily deployable to Vercel or your favorite cloud provider.
 
 ### For Moviegoers
 
@@ -42,13 +42,7 @@
 
 ## ⚡ Getting Started
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/SonOfChrist/Movie-Ticket-Booking-App.git
-   cd quickshow-movie-ticket-app -> Client & Server
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    cd client
    npm install
@@ -56,7 +50,7 @@
    npm install
    ```
 
-3. **Run the app:**
+2. **Run the app:**
    - **Frontend:**  
      ```bash
      cd client
@@ -69,11 +63,6 @@
       npm run server
       npm start
      ```
-
-4. **Open in your browser:**  
-   [http://localhost:5173](http://localhost:5173) (or your configured port)
-
-
 ## 🖼️ App Preview
 - **Movie TicketApp**  
   <img src="./client/public/MovieTicketAppDesignedPage.png" alt="MovieTicketApp" width="900">
@@ -89,25 +78,6 @@
 - **Marketing-Ready:** Built-in tools for promotions, newsletters, and social sharing.
 - **Secure & Compliant:** Modern authentication and data protection out of the box.
 - **Cloud-Ready:** Manage your cinema from anywhere, on any device.
-
----
-
-## 👨‍💻 For Developers
-
-- **Component-Driven:** Reusable, atomic components for rapid UI development.
-- **Easy Theming:** Tailwind CSS makes customization a breeze.
-- **API-Ready:** Easily connect to your backend or third-party APIs.
-- **Extensible:** Add authentication, payment, or analytics with minimal friction.
-- **Clean Code:** Linting, formatting, and clear folder structure
-
-## 🤝 Contributing
-
-We welcome contributions from the community!  
-- Fork the repo
-- Create a feature branch
-- Submit a pull request
-
-For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
