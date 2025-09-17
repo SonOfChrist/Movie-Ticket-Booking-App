@@ -76,18 +76,7 @@
 
 ## 🖼️ App Preview
 - **Movie TicketApp**  
-  <img src="./client/public/Movie Ticket App Home Page.png" alt="MovieTicketApp" width="900">
-- **Movie Card**
-   <img src="./client/public/QuickShowMovieCard.png" alt="MovieCard" width="900">
-- **Movie Trailers**
- <img src="./client/public/MoviesTrailerSection.png" alt="MovieTrailers" width="900"> 
-
-- **Admin Dashboard | Add Shows | List Bookings | List Shows**
- <img src="./client/public/AdminDashboard.png" alt="adminDashboard" width="900"> 
-
-- **Seat LayOut**
-<img src="./client/public/SeatLayout.png" alt="SeatLayout" width="900">
-
+  <img src="./client/public/MovieTicketAppDesignedPage.png" alt="MovieTicketApp" width="900">
 ---
 
 ## 🛡️ For Managers: What Sets QuickShow Apart?
