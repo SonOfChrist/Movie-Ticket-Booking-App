@@ -3,13 +3,16 @@ import BlurCircle from './BlurCircle';
 import MovieCard from './MovieCard';
 import { ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import { dummyShowsData } from '../assets/assets';
+//import { dummyShowsData } from '../assets/assets';
+import { useAppContext } from '../context/AppContext';
 
 
 const FeaturedSection = () => {
 
   const navigate = useNavigate();
-// 'h-screen flex items-center justify-start bg-cover bg-center'
+
+  const{shows} = useAppContext();
+  
   return (
     <div className='px-6 md:px-16 lg:px-24 xl:px-44 overflow-hidden bg-cover bg-center justify-start h-screen'  style={{ backgroundImage: 'url("/moana-disney.png")' }}>
       <div className='relative flex items-center justify-between pt-20 pb-10'>
@@ -24,7 +27,7 @@ const FeaturedSection = () => {
       </div>
 
       <div className='flex flex-wrap max-sm:justify-center items-center gap-14 mt-8'>
-        {dummyShowsData.slice(0, 7).map((show)=> (
+        {shows.slice(0, 6).map((show)=> (
             <MovieCard key={show._id} movie={show}/>
         ))}
       </div>

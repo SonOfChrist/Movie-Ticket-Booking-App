@@ -2,16 +2,20 @@ import React from 'react'
 import timeFormat from '../lib/timeFormat'
 import { StarIcon, Ticket } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useAppContext } from '../context/AppContext'
 
 const MovieCard = ({ movie }) => {
+
   const navigate = useNavigate()
+
+  const{image_Base_Url} = useAppContext();
 
   return (
     <div className="group relative flex flex-col justify-between bg-gradient-to-br from-gray-900 via-gray-800 to-primary/10 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 w-72 overflow-hidden border border-gray-700/40">
       {/* Poster */}
       <div className="relative cursor-pointer" onClick={() => { navigate(`/movies/${movie._id}`); scrollTo(0, 0) }}>
         <img
-          src={movie.backdrop_path}
+          src={image_Base_Url + movie.backdrop_path}
           alt={movie.title}
           className="rounded-t-2xl h-56 w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
@@ -22,7 +26,7 @@ const MovieCard = ({ movie }) => {
         </div>
         {/* Genre badge */}
         <div className="absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded-full shadow">
-          {movie.genres[0]?.name}
+          {Array.isArray(movie.genres) && movie.genres.length > 0 ? movie.genres[0].name : "Genre"}
         </div>
       </div>
 
@@ -32,7 +36,7 @@ const MovieCard = ({ movie }) => {
         <p className="text-xs text-gray-400 flex items-center gap-2">
           <span>{new Date(movie.release_date).getFullYear()}</span>
           <span>•</span>
-          <span>{movie.genres.slice(0, 2).map(genre => genre.name).join(" | ")}</span>
+          <span>{Array.isArray(movie.genres) && movie.genres.length > 0? movie.genres.slice(0, 2).map(genre => genre.name).join(" | "): "Genre"}</span>
           <span>•</span>
           <span>{timeFormat(movie.runtime)}</span>
         </p>
